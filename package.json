@@ -1,0 +1,29 @@
+{
+  "name": "clientlist",
+  "version": "0.0.1",
+  "description": "Cadastro e dados de clientes",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/lucas252souza/ClientList.git"
+  },
+  "keywords": [
+    "MEAN",
+    "Client",
+    "List"
+  ],
+  "author": "Lucas Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/lucas252souza/ClientList/issues"
+  },
+  "homepage": "https://gitlab.com/lucas252souza/ClientList#README",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.8"
+  }
+}
