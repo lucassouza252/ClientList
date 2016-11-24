@@ -1,9 +1,16 @@
 //Configuraçao do MongoDB no MLab
+
+//Inclusão de bibliotecas
 const mongoose = require('mongoose');
+
+//Configuração da String de Conexão
 const dbURI = 'mongodb://root:root@ds051953.mlab.com:51953/clientlist';
 
+
+//Conectando ao DB
 mongoose.connect(dbURI);
 
+//Mensagens de status da conexão com o banco
 mongoose.connection.on('connected', function () {
   console.log('Mongoose default connection connected to ' + dbURI);
 });
