@@ -1,0 +1,20 @@
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Name of Project</th>
+        <th>Delivery Date</th>
+    </tr>
+    <tr ng-repeat="client in clients">
+        <td>{{client.name}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.nameProject}}</td>
+        <td>{{client.deliveryDate}}</td>
+    </tr>
+</table>
+
+<!--
+<ul>
+    <li ng-repeat="client in clients">{{client.name}}</li>
+</ul>
+-->

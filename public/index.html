@@ -1,0 +1,60 @@
+<html ng-app="angularApp">
+<head>
+    <meta charset="utf-8">
+    <title>Client List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../angularApp/css/style.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--Diretiva para a rota /clients do angularApp -->
+                <a class="navbar-brand" href="/" ui-sref="clients">Client List</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/" ui-sref="clients">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a href="/new">Novo</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <h1 class="text-center">Lista de clientes</h1>
+
+    <form class="form-position">
+        <div class="col-xs-4">
+            <label for="exampleInputName2">Busca</label>
+            <input type="text" class="form-control" placeholder="Digite Aqui">
+        </div>
+    </form>
+
+<!--
+    <ul>
+        <li><a ui-sref="clients">Lista de Clientes</a></li>
+    </ul>
+-->
+    <!--Diretiva para renderização do template clientsList.html -->
+    <div ui-view></div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+
+    <script src="angularApp/components/angularApp.js"></script>
+    <script src="angularApp/components/clients/clientsController.js"></script>
+
+</body>
+</html>

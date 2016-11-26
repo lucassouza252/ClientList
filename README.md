@@ -14,6 +14,7 @@
 </ul>
 
 <p>Para o MongoDB, utilizar: "https://mlab.com/" </p>
+<hr>
 
 ### Routes
 
@@ -24,8 +25,8 @@
     <li>put: /api/client/:id</li>
     <li>delete: /api/client/:id</li>
 </ul>
-
+<hr>
 
 #### Progress
 
-<p>30% concluido.</p>
+<p>45% concluido.</p>
