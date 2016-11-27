@@ -34,6 +34,7 @@ module.exports.update = function(id, query, done){
         client.name = query.name;
         client.email = query.email;
         client.projectName = query.projectName;
+        client.deliveryDate = query.deliveryDate;
 
         client.save(function(err){
             done(err, client);

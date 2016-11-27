@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <title>Client List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../angularApp/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
@@ -18,13 +18,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!--Diretiva para a rota /clients do angularApp -->
-                <a class="navbar-brand" href="/" ui-sref="clients">Client List</a>
+                <a class="navbar-brand" href="/">Client List</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/" ui-sref="clients">Home<span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
                     <li><a href="/new">Novo</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -40,21 +40,35 @@
         </div>
     </form>
 
-<!--
+    <!--
     <ul>
-        <li><a ui-sref="clients">Lista de Clientes</a></li>
-    </ul>
+    <li><a ui-sref="clients">Lista de Clientes</a></li>
+</ul>
 -->
-    <!--Diretiva para renderização do template clientsList.html -->
-    <div ui-view></div>
+<!--Diretiva para renderização do template clientsList.html -->
+<!-- <div ui-view></div> -->
+<section ng-Controller="ClientController">
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Name of Project</th>
+            <th>Delivery Date</th>
+        </tr>
+        <tr ng-repeat="client in clients">
+            <td class="active">{{client.name}}</td>
+            <td class="success">{{client.email}}</td>
+            <td class="warning">{{client.projectName}}</td>
+            <td class="info">{{client.deliveryDate}}</td>
+        </tr>
+    </table>
+</section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.1/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.1/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
-
-    <script src="angularApp/components/angularApp.js"></script>
-    <script src="angularApp/components/clients/clientsController.js"></script>
+<script src="angularApp/components/angularApp.js"></script>
+<script src="angularApp/components/clients/clientsController.js"></script>
 
 </body>
 </html>

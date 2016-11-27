@@ -8,5 +8,5 @@ module.exports = mongoose.model('List', {
     'email': require('./ListFields/fieldEmail'),
     'registred_at': require('./ListFields/fieldRegistred_at'),
     'deliveryDate': require('./ListFields/fieldDeliveryDate'),
-    'nameProject': require('./ListFields/fieldNameProject')
+    'projectName': require('./ListFields/fieldProjectName')
 });

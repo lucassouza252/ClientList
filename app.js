@@ -8,7 +8,6 @@ const helmet = require('helmet');
 //Inclusão de modulos proprios
 const config = require('./src/config/config');
 const routerApi = require('./src/routes/routerApi');
-//const routerView = require('./src/routes/routerView');
 
 
 //Configuração
@@ -17,6 +16,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(helmet());
 app.use('/angularApp', express.static(__dirname + '/angularApp'));
+app.use(express.static(__dirname + '/public'));
 
 //Rotas
 app.get('/', function(req, res){

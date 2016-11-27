@@ -8,7 +8,7 @@ const Field = {
     type: String
     , get: _get
     , set: _set
-    , validate: [_validate, 'Nome precisa ser maior que 3 caracteres']
+    , validate: [_validate, 'Nome do Projeto precisa ser maior que 3 caracteres']
     , required: true
     , index: true
 }

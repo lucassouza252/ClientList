@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/client', function(req, res){
     listController.find(req.query, function(err, entry){
         if(err){
-            console.log(err);
+            throw err;
             res.status(500).json(err);
         }
         else{
@@ -26,7 +26,7 @@ router.get('/client', function(req, res){
 router.get('/client/:id', function(req, res){
     listController.findId(req.params.id, function(err, entry){
         if(err){
-            console.log(err);
+            throw err;
             res.status(500).json(err);
         }
         else{
@@ -39,7 +39,7 @@ router.get('/client/:id', function(req, res){
 router.post('/client', function(req, res){
     listController.create(req.body, function(err, entry){
         if(err){
-            console.log(err);
+            throw err;
             res.status(500).json(err);
         }
         else{
@@ -52,7 +52,7 @@ router.post('/client', function(req, res){
 router.put('/client/:id', function(req, res){
     listController.update(req.params.id, req.body, function(err, entry){
         if(err){
-            console.log(err);
+            throw err;
             res.status(500).json(err);
         }
         else{
@@ -65,7 +65,7 @@ router.put('/client/:id', function(req, res){
 router.delete('/client/:id', function(req, res){
     listController.remove(req.params.id, function(err, entry){
         if(err){
-            console.log(err);
+            throw err;
             res.status(500).json(err);
         }
         else{

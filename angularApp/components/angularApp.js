@@ -1,21 +1,16 @@
 (function(){
     'use strict';
-    
-     angular.module('angularApp', ['ui.router'])
-        .config(['$stateProvider', '$urlRouterProvider',
-            function($stateProvider, $urlRouterProvider){
 
-                let clientState = {
-                    name: 'clients',
-                    url: '/clients',
-                    templateUrl: 'angularApp/components/clients/clientsList.html',
-                    controller: 'ClientController'
-                }
+    angular.module('angularApp', ['ui.router'])
+    .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
 
-                $urlRouterProvider.otherwise('/')
-                $stateProvider.state(clientState)
+        let clientState = {
+            name: 'clients',
+            url: '/clients',
+            controller: 'ClientController'
+        }
+        $urlRouterProvider.otherwise('/')
+        $stateProvider.state(clientState)
 
-            }
-        ])
-
+    }])
 })()
