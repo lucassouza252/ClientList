@@ -15,15 +15,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(helmet());
-app.use('/angularApp', express.static(__dirname + '/angularApp'));
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/listApp'));
+//app.use(express.static(__dirname + '/public'));
 
 //Rotas
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/public/index.html');
-});
-app.get('/new', function(req, res){
-    res.sendFile(__dirname + '/public/new.html');
+    res.sendFile(__dirname + '/listApp/index.html');
 });
 
 app.use('/api', routerApi);

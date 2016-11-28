@@ -1,0 +1,26 @@
+<div class="panel panel-default" ng-init="getClient()">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{client.name}}</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Project Name</th>
+                <th>Delivery Date</th>
+            </tr>
+            <tr>
+                <td>{{client.name}}</td>
+                <td>{{client.email}}</td>
+                <td>{{client.projectName}}</td>
+                <td>{{client.deliveryDate}}</td>
+            </tr>
+        </table>
+
+        <div class="pull-right">
+            <a class="btn btn-default" href="#/client/edit/{{client._id}}" role="button">Edit</a>
+            <a class="btn btn-default" href="#" role="button" ng-click="removeClient(client._id)">Remove</a>
+        </div>
+    </div>
+</div>
