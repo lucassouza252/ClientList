@@ -17,21 +17,21 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/listApp'));
 //app.use(cors({origin: '*'}));
 app.use(function(req, res, next){
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Authorization, Content-Type, X-Requested-With");
-    res.header("Access-Control-Allow-Methods", "GET, POST");
+    res.setheader("Access-Control-Allow-Origin", "*");
+    res.setheader("Access-Control-Allow-Headers", "Authorization, Content-Type, X-Requested-With");
+    res.setheader("Access-Control-Allow-Methods", "GET, POST");
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
 
-app.all("/api/*", function (req, res, next) {
+/*app.all("/api/*", function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Content-Type, X-Requested-With");
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
     res.setHeader('Access-Control-Allow-Credentials', true);
     return next();
 });
-
+*/
 
 //Rotas
 app.get('/', function(req, res){
