@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/listApp'));
-app.use(cors({origin: 'http://lcteste.esy.es/'}));
+app.use(cors({origin: 'http://lcteste.esy.es'}));
 app.use(function(req, res, next){
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With");
