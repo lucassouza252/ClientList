@@ -14,12 +14,12 @@ const routerApi = require('./src/routes/routerApi');
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/listApp'));
+app.use(express.static(__dirname + '/public'));
 //app.use(cors({origin: '*'}));
 app.use(function(req, res, next){
-    res.setheader("Access-Control-Allow-Origin", "*");
-    res.setheader("Access-Control-Allow-Headers", "Authorization, Content-Type, X-Requested-With");
-    res.setheader("Access-Control-Allow-Methods", "GET, POST");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, X-Requested-With");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST");
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
